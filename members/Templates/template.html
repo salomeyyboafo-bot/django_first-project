@@ -2,13 +2,23 @@
 <html>
 <body>
 
-<ul>
+{% comment %} <ul>
   {% for x in mymembers %}
     <li>{{ x.firstname }}</li>
   {% endfor %}
-</ul>
+</ul> {% endcomment %}
+{% comment %} {% if greeting == 1 %}
+  <h1>Hello</h1>
+{% else %}
+  <h1>Bye</h1>
+{% endif %}
+<p>In views.py you can see what the greeting variable looks like.</p> {% endcomment %}
 
-<p>In views.py you can see what the greeting variable looks like.</p>
+<h1>Hello</h1>
+
+<p>This page contains a footer in a template.</p>
+
+{% include 'footer.html' %}
 
 </body>
 </html>
